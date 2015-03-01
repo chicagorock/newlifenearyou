@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find a New Life Near You</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="app/locationsController.js"></script>
+    <link href="content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="position: relative; top: -50px;"
+            src="https://www.google.com/maps/ms?msa=0&amp;msid=211129885001964047472.0004c169f43e89010903b&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=41.81501,-87.748669&amp;spn=0.394651,0.219368&amp;output=embed&amp;z=10"></iframe>
+
+    <div ng-controller="locationsListController">
+        <div id="locationsList">
+            <div ng-repeat="location in locations" class="locationItem">
+
+                <h3>{{locaton.LocationNamePrefix}} {{location.LocationName }}</h3>
+                <h4>{{location.LocationPastorName}}</h4>
+                <p>
+                    {{location.LocationAddress1 }} <br />
+                    {{location.LocationCity}} <br />  
+                    {{ location.LocationPhoneNumber | tel }}<br />
+                    <span ng-bind="tel"></span>
+                    {{location.LocationServiceHours}}
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

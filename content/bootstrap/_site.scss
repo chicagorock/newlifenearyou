@@ -1,0 +1,30 @@
+﻿/// <reference path = "_variables.scss">
+
+.locationItem {
+    float:left;    
+    width:19%;
+    min-width:260px;
+    height:14em;
+    padding:0 15px 10px 15px;
+    margin:1% 1% 1% 0;
+   
+
+    &:nth-of-type(2n) {
+        background:$gray-light;
+        color:#fff
+    }
+}
+
+ .google-maps {
+position: relative;
+padding-bottom: 75%; // This is the aspect ratio
+height: 0;
+overflow: hidden;
+}
+.google-maps iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 100% !important;
+}
